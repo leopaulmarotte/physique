@@ -21,13 +21,10 @@ def names(year1, year2):
 
 
 
-def Euler(q, gamma) : 
-    P = 1000000
+def Euler(q, K) : 
     t=[1880 + i for i in range(141)]
     l=names(1880, 2020)['Diane']
     y = [l[0][1]]
-    K = int(P*(q)/(q + gamma))
-    q = alpha + beta
     print(y)
     def f(x):
         return q*x*(1-(x/K))
@@ -37,7 +34,7 @@ def Euler(q, gamma) :
     
     plt.plot(t,y) 
     plt.show()
-
+#Euler(0.4, 200000000)
 
 
 #%%
