@@ -1,3 +1,8 @@
 from main import names
+from main import Euler
 
-names(1880, 1881)
+
+
+print(names(1880, 2020)['Diane'])
+
+Euler(4, 5)

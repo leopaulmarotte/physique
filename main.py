@@ -1,8 +1,6 @@
+#%%
+
 import matplotlib.pyplot as plt
-
-
-
-
 
 
 def names(year1, year2):
@@ -19,28 +17,27 @@ def names(year1, year2):
                 ligne = file.readline().split(',')
                 nom = ligne[0]
                 nb = int(ligne[2])
-    print(dico)
-
-
-def f(alpha, beta, gamma, N):
-    P =
-    K = P*(alpha+beta)/(alpha + beta + gamma)
-    return (alpha + beta)*N*(1 - N/K)
+    return dico
 
 
 
-
-def Euler(f,a,t0,T,n) : 
-    dt=T/n
-    t=[t0+i*dt for i in range(n+1)]
-    y=[a]
+def Euler(q, gamma) : 
+    P = 1000000
+    t=[1880 + i for i in range(141)]
+    l=names(1880, 2020)['Diane']
+    y = [l[0][1]]
+    K = int(P*(q)/(q + gamma))
+    q = alpha + beta
+    print(y)
+    def f(x):
+        return q*x*(1-(x/K))
+    for i in range(1, len(t)):
+        y.append(y[i-1] + f(y[i-1]))
+    print(y)
     
-    for i in range(1,n+1):
-        y . append ( y [ i - 1 ] + dt * f ( y [ i - 1 ] ) )
-    plt.plot(t,y) plt.show()
+    plt.plot(t,y) 
+    plt.show()
 
 
-#def f(x,t) : #fonction f pour tester
-    #return x
 
-
+#%%
